@@ -1,0 +1,11 @@
+{
+  "user": 
+    {
+      "id": 0,
+      "fullName": "Alexander Richardson",
+      "firstName": "Alexander",
+      "email": "aRichardson@example.com",
+      "username": "aRichardson",
+      "type": "subscriber"
+    }
+}

@@ -1,0 +1,18 @@
+<div ng-controller="BloglistController as bl">
+  <ul>
+    <li ng-if="bl.articles" ng-repeat="article in bl.articles track by $index">
+      <article class="article">
+        <header>
+          <h2>{{article.title}}</h2>
+          <address>{{article.author}}</address>
+          <time datetime="{{article.datePublished}}">{{article.datePublished }}</time>
+          <figure>
+            <img ng-if="article.media.source" ng-src="app/{{article.media.source}}" alt="">
+          </figure> 
+        </header>
+        <p>{{article.article}}</p>
+        <button type="button" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</button>
+      </article>
+    </li>
+  </ul>
+</div>
