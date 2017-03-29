@@ -51,4 +51,4 @@ gulp.task('copySource', function() {
 // });
 
 //
-// gulp.task('devDeploy', ['copySource', 'copyStyles'], function() {});
+gulp.task('distDeploy', ['copySource'], function() {});
