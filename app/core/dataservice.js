@@ -21,7 +21,7 @@
               return response.data;
             }
 
-           function failed () {
+           function failed (error) {
               $log(`Failure getting data: ${error.data}`);
             }
         }

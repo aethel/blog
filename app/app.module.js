@@ -7,7 +7,8 @@
         'blog.core',
         'blog.widgets',
         'blog.layout',
-        'blog.bloglist'
+        'blog.bloglist',
+        'blog.login'
     ])
 
 })();
