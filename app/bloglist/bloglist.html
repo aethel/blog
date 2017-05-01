@@ -2,7 +2,25 @@
     <md-content>
         <md-list flex>
             <md-list-item ng-if="bl.articles" ng-repeat="article in bl.articles track by $index">
-              <md-content flex layout-padding>
+                <md-card>
+                  <div layout='row'>
+                    <md-card-title>
+                        <md-card-title-media flex='40' ng-if="article.media.source">
+                            <figure>
+                                <img ng-src="app/{{article.media.source}}" alt="article image">
+                            </figure>
+                        </md-card-title-media>
+                        <md-card-title-text flex='60'>
+                            <h2>{{article.title}}</h2>
+                            <address>{{article.author}}</address>
+                            <time datetime="{{article.datePublished}}">{{article.datePublished }}</time>
+                            <p>{{article.article}}</p>
+                        </md-card-title-text>
+                    </md-card-title>
+                    </div>
+                    <md-button class="md-raised md-primary" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</md-button>
+                </md-card>
+                <!-- <md-content flex layout-padding>
                 <article class="article">
                     <header>
                         <h2>{{article.title}}</h2>
@@ -14,8 +32,8 @@
                     </header>
                     <p>{{article.article}}</p>
                     <md-button class="md-raised md-primary" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</md-button>
-                  </md-content>
                 </article>
+              </md-content> -->
             </md-list-item>
         </md-list flex>
     </md-content>
