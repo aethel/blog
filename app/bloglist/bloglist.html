@@ -18,22 +18,8 @@
                         </md-card-title-text>
                     </md-card-title>
                     </div>
-                    <md-button class="md-raised md-primary" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</md-button>
+                    <md-button class="md-raised md-primary default-button--rightAlign" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</md-button>
                 </md-card>
-                <!-- <md-content flex layout-padding>
-                <article class="article">
-                    <header>
-                        <h2>{{article.title}}</h2>
-                        <address>{{article.author}}</address>
-                        <time datetime="{{article.datePublished}}">{{article.datePublished }}</time>
-                        <figure>
-                            <img ng-if="article.media.source" ng-src="app/{{article.media.source}}" alt="article image">
-                        </figure>
-                    </header>
-                    <p>{{article.article}}</p>
-                    <md-button class="md-raised md-primary" ng-click="bl.likeArticle(article.id)">{{bl.isLiked(article.id) ? 'Liked' : 'Like'}}</md-button>
-                </article>
-              </md-content> -->
             </md-list-item>
         </md-list flex>
     </md-content>
