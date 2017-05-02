@@ -5,9 +5,11 @@
         'ngRoute',
         'ngMaterial',
         'blog.core',
+        'blog.routing',
         'blog.widgets',
         'blog.layout',
-        'blog.bloglist'
+        'blog.bloglist',
+        'blog.login'
     ])
 
 })();

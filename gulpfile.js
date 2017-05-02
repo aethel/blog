@@ -32,6 +32,20 @@ gulp.task('copySource', function() {
         .pipe(gulp.dest('dist/'))
 })
 
+// gulp.task('copyStyles', function() {
+//     gulp.src(['app/styles/css/*.css'])
+//         .pipe(uglifycss({
+//           "maxLineLen": 80,
+//           "uglyComments": true
+//         }))
+//         .pipe(gulp.dest('dist/styles/css/'))
+// })
+
+// gulp.task('copyFiles', function() {
+//     gulp.src('./app/**/*.html')
+//         .pipe(gulp.dest('./dist/'))
+// });
+
 gulp.task('watch', function() {
     gulp.watch('app/styles/**/*.less', ['less']);
 });

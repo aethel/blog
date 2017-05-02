@@ -11,7 +11,6 @@
         vm.likeArticle = likeArticle;
         vm.isLiked = isLiked;
 
-        console.log(dataUrl);
         activate();
 
         function activate() {
@@ -54,8 +53,3 @@
     }
 
 })();
-
-/*
-  click - get set from localstorage, add, save
-  load - get set from local storage, check if id exists, return true
-*/
