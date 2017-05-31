@@ -7,23 +7,18 @@
 
     function routing($routeProvider) {
         $routeProvider.
-        when('/bloglist', {
-            templateUrl: 'bloglist/bloglist.html',
-            controller: 'BloglistController',
-            controllerAs: 'bl'
-        }).
-        when('/login', {
-            templateUrl: 'login/login.html',
-            controller: 'LoginController',
-            controllerAs: 'l'
-        }).
+        // when('/bloglist', {
+        //     templateUrl: 'bloglist/bloglist.html',
+        //     controller: 'BloglistController',
+        //     controllerAs: 'bl'
+        // }).
         when('/', {
-            templateUrl: 'login/login.html',
-            controller: 'LoginController',
-            controllerAs: 'l'
+          templateUrl: 'bloglist/bloglist.html',
+          controller: 'BloglistController',
+          controllerAs: 'bl'
         }).
         otherwise({
-            redirectTo: '/login'
+            redirectTo: '/'
         });
     }
 

@@ -21,34 +21,11 @@
         }
 
         function getArticles() {
-            return dataservice.get(`${dataUrl}/articles.json`).then(function(data) {
+            return dataservice.get(`${dataUrl}London,gb`).then(function(data) {
                 vm.articles = data.articles;
                 return vm.articles;
             })
-        }
-
-        function likeArticle(id) {
-            let likedArticlesArray = [];
-            if (localstore.get('liked')) {
-                likedArticlesArray = localstore.get('liked');
-            }
-            if(likedArticlesArray.includes(id)){
-              let index = likedArticlesArray.findIndex(i => i === id);
-              likedArticlesArray.splice(index,1);
-            } else {
-              likedArticlesArray.push(id);
-            }
-            localstore.set('liked', likedArticlesArray);
-        }
-
-        function isLiked(id){
-          if (!localstore.get('liked')) {
-              return;
-          }
-          let likedArticlesArray = localstore.get('liked');
-          let foundId = likedArticlesArray.find(i => i === id);
-          return (foundId === id);
-        }
+        }  
 
     }
 

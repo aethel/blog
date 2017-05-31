@@ -3,6 +3,6 @@
 
     angular
          .module('blog.core')
-         .constant('dataUrl', `${window.location.protocol}//${window.location.host}/blog/app/content`)
+         .constant('dataUrl', `api.openweathermap.org/data/2.5/forecast?q=`)
 
 })();

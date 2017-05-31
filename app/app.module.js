@@ -4,12 +4,10 @@
     angular.module('blog', [
         'ngRoute',
         'ngMaterial',
-        'blog.core',
-        'blog.routing',
+        'blog.core',        
         'blog.widgets',
         'blog.layout',
-        'blog.bloglist',
-        'blog.login'
+        'blog.bloglist'
     ])
 
 })();
